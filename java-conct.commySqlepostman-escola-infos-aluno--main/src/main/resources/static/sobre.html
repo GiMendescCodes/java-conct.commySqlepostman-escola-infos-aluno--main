@@ -1,11 +1,284 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre</title>
+    <title>Sobre Nós - Escola Conectada</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .about-section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #3a7bd5;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: calc(33.333% - 1rem);
+            min-width: 250px;
+            flex-grow: 1;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-header {
+            background-color: #3a7bd5;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .card p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .history-section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .team-section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .info-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .info-item {
+            flex-basis: 48%;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item h3 {
+            color: #3a7bd5;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .info-item p {
+            font-size: 1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: 100%;
+            }
+
+            .info-item {
+                flex-basis: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>SOBRE</h1>
+<header class="header">
+    <div class="container">
+        <h1>Escola Conectada</h1>
+        <p>Unindo conhecimento e pessoas em uma comunidade de aprendizado</p>
+    </div>
+</header>
+
+<main class="container">
+    <section class="about-section">
+        <h2>Sobre Nós</h2>
+        <p>
+            Bem-vindo à Escola Conectada, uma instituição dedicada à excelência acadêmica e ao desenvolvimento integral dos nossos alunos. Fundada em 2010, nossa escola tem como missão proporcionar um ambiente de aprendizado estimulante, onde cada estudante possa desenvolver seu potencial máximo.
+        </p>
+        <p>
+            Contamos com um corpo docente altamente qualificado e comprometido com a educação de qualidade. Nossa abordagem pedagógica combina métodos tradicionais com tecnologias inovadoras, preparando nossos alunos para os desafios do século XXI.
+        </p>
+
+        <div class="card-container">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Nossa Missão</h3>
+                </div>
+                <div class="card-body">
+                    <p>Formar cidadãos críticos, éticos e preparados para transformar positivamente a sociedade através de uma educação integral e de qualidade.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Nossa Visão</h3>
+                </div>
+                <div class="card-body">
+                    <p>Ser referência em educação inovadora, integrando conhecimento acadêmico, valores humanos e tecnologia para o desenvolvimento pleno dos estudantes.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Nossos Valores</h3>
+                </div>
+                <div class="card-body">
+                    <p>Excelência, Respeito, Inovação, Responsabilidade, Colaboração e Inclusão são os pilares que norteiam nossas ações.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="history-section">
+        <h2>Nossa História</h2>
+        <p>
+            A Escola Conectada nasceu do sonho de um grupo de educadores que acreditava em uma educação transformadora. Em 2010, abrimos nossas portas com apenas três salas de aula e 45 alunos. Hoje, somos uma instituição reconhecida pela excelência educacional, com modernas instalações e centenas de alunos.
+        </p>
+        <p>
+            Ao longo destes anos, mantivemos nosso compromisso com a qualidade do ensino e com o desenvolvimento integral dos estudantes. Investimos continuamente em infraestrutura, tecnologia e capacitação do nosso corpo docente, sempre buscando oferecer o melhor para nossa comunidade escolar.
+        </p>
+        <p>
+            Nosso crescimento é resultado do trabalho dedicado de todos que fazem parte da nossa história: professores, funcionários, alunos e famílias que acreditam em nosso projeto educacional.
+        </p>
+    </section>
+
+    <section class="team-section">
+        <h2>Nossa Equipe</h2>
+        <p>
+            A Escola Conectada conta com uma equipe de profissionais dedicados e altamente qualificados. Nossos educadores possuem formação acadêmica de excelência e participam regularmente de programas de desenvolvimento profissional para se manterem atualizados com as melhores práticas pedagógicas.
+        </p>
+
+        <div class="info-container">
+            <div class="info-item">
+                <h3>Corpo Docente</h3>
+                <p>Professores especialistas em suas áreas de atuação, comprometidos com o aprendizado significativo e o desenvolvimento integral dos alunos.</p>
+            </div>
+
+            <div class="info-item">
+                <h3>Equipe Pedagógica</h3>
+                <p>Coordenadores e orientadores educacionais que acompanham de perto o progresso dos estudantes e oferecem suporte contínuo ao processo de ensino-aprendizagem.</p>
+            </div>
+
+            <div class="info-item">
+                <h3>Equipe Administrativa</h3>
+                <p>Profissionais dedicados a garantir o funcionamento eficiente da instituição, proporcionando uma experiência de excelência para toda a comunidade escolar.</p>
+            </div>
+
+            <div class="info-item">
+                <h3>Equipe de Apoio</h3>
+                <p>Colaboradores que zelam pela manutenção, segurança e bem-estar de todos no ambiente escolar, contribuindo para um espaço educativo harmonioso.</p>
+            </div>
+        </div>
+
+        <p>
+            Juntos, formamos uma comunidade educativa comprometida com a formação de cidadãos preparados para os desafios do futuro e capazes de transformar positivamente a sociedade.
+        </p>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2025 Escola Conectada. Todos os direitos reservados.</p>
+        <p>Rua da Educação, 123 - Bairro do Conhecimento - Cidade do Saber</p>
+        <p>Telefone: (00) 1234-5678 | Email: contato@escolaconectada.com.br</p>
+    </div>
+</footer>
 </body>
 </html>

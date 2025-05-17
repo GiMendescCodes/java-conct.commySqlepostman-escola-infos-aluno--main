@@ -6,6 +6,91 @@
     <title>Professor</title>
 </head>
 <body>
-    <h1>PROFESSOR</h1>
+<div class="container">
+    <script src="script.js"></script>
+    <h1>Professores Cadastrados</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Telefone</th>
+        </tr>
+        </thead>
+        <tbody id="professor-tbody">
+        <!-- Os dados dos alunos vão aparecer aqui -->
+        </tbody>
+    </table>
+</div>
 </body>
 </html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+  fetch('http://localhost:8080/professores')
+    .then(response => response.json())
+    .then(data => {
+      const tbody = document.getElementById('professor-tbody');
+      data.forEach(professor => {
+        const tr = document.createElement('tr');
+
+        tr.innerHTML = `
+          <td>${professor.nomeProfessor}</td>
+          <td>${professor.emailProfessor}</td>
+          <td>${professor.telefoneProfessor}</td>
+        `;
+
+        tbody.appendChild(tr);
+      });
+    })
+    .catch(error => {
+      console.error('Erro ao buscar professores:', error);
+      alert('Erro ao carregar a lista de professores.');
+    });
+});
+</script>
+
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+thead {
+  background-color: #000;
+  color: white;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #caf0fc;
+}
+</style>
